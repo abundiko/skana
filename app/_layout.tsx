@@ -3,7 +3,9 @@ import "@/global.css";
 import InitWrapper from "@/components/hoc/InitWrapper";
 import ThemeWrapper from "@/components/hoc/ThemeWrapper";
 import AppStack from "@/components/layout/AppStack";
+import { AppToastProvider } from "@/components/layout/AppToast";
 import * as SplashScreen from "expo-splash-screen";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 SplashScreen.preventAutoHideAsync();
@@ -19,13 +21,16 @@ export default function RootLayout() {
 function MainLayout() {
   return (
     <>
-      <ThemeWrapper>
-        <InitWrapper>
-          <SafeAreaProvider>
-            <AppStack screens={["onboard"]} />
-          </SafeAreaProvider>
-        </InitWrapper>
-      </ThemeWrapper>
+      <GestureHandlerRootView>
+        <ThemeWrapper>
+          <InitWrapper>
+            <SafeAreaProvider>
+              <AppStack screens={["onboard"]} />
+            </SafeAreaProvider>
+            <AppToastProvider />
+          </InitWrapper>
+        </ThemeWrapper>
+      </GestureHandlerRootView>
     </>
   );
 }

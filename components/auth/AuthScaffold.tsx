@@ -7,15 +7,17 @@ type AuthScaffoldProps = {
   title: string;
   description?: string;
   children: React.ReactNode;
+  underBody?: React.ReactNode;
 };
 
 export default function AuthScaffold({
   title,
   description,
   children,
+  underBody
 }: AuthScaffoldProps) {
   return (
-    <AppScaffold>
+    <AppScaffold underBody={underBody}>
       <View className="px-5 gap-1">
         <TText variant="base" className="font-semibold text-xl">
           {title}

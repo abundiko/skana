@@ -18,11 +18,11 @@ export default function TText({
       style={[
         style,
         {
-          letterSpacing: 0.7,
+          letterSpacing: 0.1,
         },
       ]}
       className={cn(
-        `${variant ? cls.text[variant] : ""} font-normal tracking-tight ${className}`
+        `${variant ? cls.text[variant] : ""} font-normal ${className}`
       )}
       {...props}
     >

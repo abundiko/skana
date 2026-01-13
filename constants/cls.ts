@@ -66,7 +66,7 @@ export const cls = {
   },
   input: {
     className:
-      "px-4 py-4 rounded-xl bg-gray-100 dark:bg-white/10 text-slate-800 dark:text-slate-200 font-normal",
+      "px-4 py-4 rounded-xl bg-gray-100 dark:bg-white/10 font-normal",
     borderClassName: "border border-neutral-300 dark:border-neutral-800",
     underline:
       "border-b border-black/40 dark:border-white/40 text-gray-800 dark:text-gray-100",

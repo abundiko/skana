@@ -22,6 +22,7 @@ export type AppInputProps = TextInputProps & {
   prefix?: ReactNode;
   regexFormatter?: RegExp;
   suffix?: ReactNode;
+  ref?: React.RefObject<TextInput | null>;
 };
 
 export type AppInputPropsWithName<T = string> = AppInputProps & {
@@ -33,13 +34,15 @@ export function AppInput({
   type = "text",
   label = "",
   errors,
-  variant = "borderClassName",
+  variant,
   inputClass = "",
   prefix,
   suffix,
+  ref: _ref,
   ...props
 }: AppInputProps) {
-  const ref = useRef<TextInput>(null);
+  const __ref = useRef<TextInput>(null);
+  const ref = _ref || __ref;
   const style = useResolveClassNames(cn("bg-primary", cls.text.shade100));
   const [focused, setFocused] = useState<boolean>(!!props.autoFocus);
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -58,9 +61,10 @@ export function AppInput({
 
     return [
       cls.input.className,
+      cls.text.shade100,
       errors?.length ? "!border-red-500" : "",
       type === "password" ? "pr-6" : "",
-      focused ? "border border-primary" : cls.input[variant],
+      focused ? "border border-primary" : variant ? cls.input[variant] : "",
       variant,
       "h-14",
     ]
@@ -87,6 +91,7 @@ export function AppInput({
         <View className="relative flex-1 mb-1 flex-row items-center">
           <TextInput
             {...props}
+            
             onChangeText={(txt) =>
               props.regexFormatter
                 ? props.onChangeText?.(txt.replace(props.regexFormatter, ""))

@@ -33,3 +33,15 @@ export function getMostRecurringItem<T extends string | number>(array: T[]): T {
 
   return mostRecurring;
 }
+
+export function removeNullishValues(obj: any) {
+  return Object.fromEntries(
+    Object.entries(obj)
+      .filter(([, value]) => value !== null && value !== undefined)
+      .map(([key, value]) => [key, value])
+  );
+}
+
+export function sleep(s:number){
+  return new Promise(resolve=>setTimeout(resolve,s*1000))
+}

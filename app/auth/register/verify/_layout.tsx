@@ -6,12 +6,7 @@ export default function _layout() {
       <AppStack
         screens={[
           "index",
-          "phone",
-          "phone-verify",
-          "create-pin",
-          "details",
-          "verify",
-          "success",
+          "nin",
         ]}
       />
     </>

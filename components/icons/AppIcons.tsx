@@ -2,6 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
 
+import at from "../../assets/images/flat-icons/at.svg";
 import avatar_outline from "../../assets/images/flat-icons/avatar_outline.svg";
 import business_outline from "../../assets/images/flat-icons/business_outline.svg";
 import card_outline from "../../assets/images/flat-icons/card_outline.svg";
@@ -10,6 +11,7 @@ import document_outline from "../../assets/images/flat-icons/document_outline.sv
 import lock_outline from "../../assets/images/flat-icons/lock_outline.svg";
 import phone_fill from "../../assets/images/flat-icons/phone_fill.svg";
 import questionmark_circle from "../../assets/images/flat-icons/questionmark_circle.svg";
+import spinner from "../../assets/images/flat-icons/spinner.svg";
 
 import React, { forwardRef } from "react";
 import { SvgProps } from "react-native-svg";
@@ -50,6 +52,7 @@ export const AppSvg = forwardRef<any, AppSvgProps>(
 AppSvg.displayName = "AppSvg";
 
 export const AppIcons = {
+  at: (props: Omit<AppSvgProps, "icon">) => <AppSvg icon={at} {...props} />,
   avatar_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={avatar_outline} {...props} />
   ),
@@ -73,5 +76,8 @@ export const AppIcons = {
   ),
   questionmark_circle: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={questionmark_circle} {...props} />
+  ),
+  spinner: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={spinner} {...props} />
   ),
 };
