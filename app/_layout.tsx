@@ -1,24 +1,31 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import "@/global.css";
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import InitWrapper from "@/components/hoc/InitWrapper";
+import ThemeWrapper from "@/components/hoc/ThemeWrapper";
+import AppStack from "@/components/layout/AppStack";
+import * as SplashScreen from "expo-splash-screen";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
-export const unstable_settings = {
-  anchor: '(tabs)',
-};
+SplashScreen.preventAutoHideAsync();
+SplashScreen.setOptions({
+  duration: 500,
+  fade: true,
+});
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
+  return <MainLayout />;
+}
 
+function MainLayout() {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <>
+      <ThemeWrapper>
+        <InitWrapper>
+          <SafeAreaProvider>
+            <AppStack screens={["onboard"]} />
+          </SafeAreaProvider>
+        </InitWrapper>
+      </ThemeWrapper>
+    </>
   );
 }

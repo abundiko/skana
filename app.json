@@ -13,29 +13,62 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundColor": "#1E40AF",
+        "foregroundImage": "./assets/images/icon-mono.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
-        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+        "monochromeImage": "./assets/images/icon-mono.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
-    },
-    "web": {
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.abundiko.skana"
     },
     "plugins": [
       "expo-router",
       [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow Skana to use Face ID."
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/SF-Pro-Display-Semibold.otf",
+            "./assets/fonts/SF-Pro-Display-Light.otf",
+            "./assets/fonts/SF-Pro-Display-Medium.otf",
+            "./assets/fonts/SF-Pro-Display-Bold.otf",
+            "./assets/fonts/SF-Pro-Display-Regular.otf"
+          ]
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Skana to access your camera",
+          "microphonePermission": "Allow Skana to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
+          "image": "./assets/images/icon.png",
+          "imageWidth": 100,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#1E40AF",
           "dark": {
-            "backgroundColor": "#000000"
+            "backgroundColor": "#1E40AF"
           }
         }
       ]
@@ -43,6 +76,19 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "TAILWIND_DISABLE_LIGHTNINGCSS": "true",
+      "router": {},
+      "eas": {
+        "projectId": "0c575b6a-f88a-4343-8786-73a45563a8aa"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/0c575b6a-f88a-4343-8786-73a45563a8aa"
     }
   }
 }

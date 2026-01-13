@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import "uniwind";
+
+@theme {
+  --font-bold: "ClashDisplayBold";
+  --font-normal: "ClashDisplay";
+  --font-medium: "ClashDisplayMedium";
+  --font-light: "ClashDisplayLight";
+  --font-semibold: "ClashDisplaySemiBold";
+
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #6366f1;
+  --color-primary-500: #1e40af;
+  --color-primary-600: #1e3a8a;
+  --color-primary-700: #1e3a8a;
+  --color-primary-800: #1e2f6e;
+  --color-primary-900: #172554;
+  --color-primary-950: #0f172a;
+
+  --color-bg-light: #FAFAFA;
+  --color-bg-dark: #121212;
+}
+
+@layer theme {
+  :root {
+    @variant light {
+      --color-primary: var(--color-primary-500);
+      --color-primary-light: var(--color-primary-300);
+      --color-primary-dark: var(--color-primary-700);
+    }
+
+    @variant dark {
+      --color-primary: var(--color-primary-300);
+      --color-primary-light: var(--color-primary-500);
+      --color-primary-dark: var(--color-primary-700);
+    }
+  }
+}
