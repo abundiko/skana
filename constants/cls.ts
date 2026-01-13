@@ -64,4 +64,11 @@ export const cls = {
     bg: `${buttonClass} bg-primary-dark dark:bg-white py-2.5 rounded-4xl`,
     bgText: `${buttonTextClass} dark:text-black text-white`,
   },
+  input: {
+    className:
+      "px-4 py-4 rounded-xl bg-gray-100 dark:bg-white/10 text-slate-800 dark:text-slate-200 font-normal",
+    borderClassName: "border border-neutral-300 dark:border-neutral-800",
+    underline:
+      "border-b border-black/40 dark:border-white/40 text-gray-800 dark:text-gray-100",
+  },
 } as const;

@@ -90,7 +90,7 @@ export default function OnboardScreen(props: OnboardScreenProps) {
           <View className=" justify-center items-center gap-4 pt-4">
             <Animated.View
               exiting={FadeOut.duration(150)}
-              entering={FadeInDown.delay(200).springify().damping(50)}
+              entering={FadeInDown.delay(80).springify().damping(50)}
             >
               <TText
                 variant="base"
@@ -101,7 +101,7 @@ export default function OnboardScreen(props: OnboardScreenProps) {
             </Animated.View>
             <Animated.View
               exiting={FadeOut.duration(150)}
-              entering={FadeInDown.delay(400).springify().damping(50)}
+              entering={FadeInDown.delay(120).springify().damping(50)}
             >
               <TText variant="shade100" className="text-center text-base mb-2">
                 {props.description}
