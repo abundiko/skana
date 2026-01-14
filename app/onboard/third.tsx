@@ -11,7 +11,15 @@ export default function Onboard3() {
       updateItem({
         onboarded: true,
       });
-      router.navigate(paths.home);
+      router.navigate(paths.register);
+    });
+  }
+  function secondaryAction() {
+    requestAnimationFrame(() => {
+      updateItem({
+        onboarded: true,
+      });
+      router.navigate(paths.login);
     });
   }
 
@@ -25,6 +33,7 @@ export default function Onboard3() {
       primaryAction={primaryAction}
       image={require("@/assets/images/design/onboard-3.png")}
       secondaryActionLabel="Already Have An Account? Login"
+      secondaryAction={secondaryAction}
     />
   );
 }

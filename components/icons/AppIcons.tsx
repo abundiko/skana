@@ -5,17 +5,22 @@
 import at from "../../assets/images/flat-icons/at.svg";
 import avatar_fill from "../../assets/images/flat-icons/avatar_fill.svg";
 import avatar_outline from "../../assets/images/flat-icons/avatar_outline.svg";
+import bell_outline from "../../assets/images/flat-icons/bell_outline.svg";
 import business_outline from "../../assets/images/flat-icons/business_outline.svg";
 import card_fill from "../../assets/images/flat-icons/card_fill.svg";
 import card_outline from "../../assets/images/flat-icons/card_outline.svg";
 import chevron_down from "../../assets/images/flat-icons/chevron_down.svg";
 import document_outline from "../../assets/images/flat-icons/document_outline.svg";
+import filter_lines from "../../assets/images/flat-icons/filter_lines.svg";
 import fingerprint from "../../assets/images/flat-icons/fingerprint.svg";
 import home_fill from "../../assets/images/flat-icons/home_fill.svg";
 import home_outline from "../../assets/images/flat-icons/home_outline.svg";
+import inbox_outline from "../../assets/images/flat-icons/inbox_outline.svg";
 import lock_outline from "../../assets/images/flat-icons/lock_outline.svg";
 import phone_fill from "../../assets/images/flat-icons/phone_fill.svg";
 import questionmark_circle from "../../assets/images/flat-icons/questionmark_circle.svg";
+import scan_outline from "../../assets/images/flat-icons/scan_outline.svg";
+import search_outline from "../../assets/images/flat-icons/search_outline.svg";
 import spinner from "../../assets/images/flat-icons/spinner.svg";
 import transaction_history_fill from "../../assets/images/flat-icons/transaction_history_fill.svg";
 import transaction_history_outline from "../../assets/images/flat-icons/transaction_history_outline.svg";
@@ -66,6 +71,9 @@ export const AppIcons = {
   avatar_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={avatar_outline} {...props} />
   ),
+  bell_outline: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={bell_outline} {...props} />
+  ),
   business_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={business_outline} {...props} />
   ),
@@ -81,6 +89,9 @@ export const AppIcons = {
   document_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={document_outline} {...props} />
   ),
+  filter_lines: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={filter_lines} {...props} />
+  ),
   fingerprint: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={fingerprint} {...props} />
   ),
@@ -90,6 +101,9 @@ export const AppIcons = {
   home_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={home_outline} {...props} />
   ),
+  inbox_outline: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={inbox_outline} {...props} />
+  ),
   lock_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={lock_outline} {...props} />
   ),
@@ -98,6 +112,12 @@ export const AppIcons = {
   ),
   questionmark_circle: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={questionmark_circle} {...props} />
+  ),
+  scan_outline: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={scan_outline} {...props} />
+  ),
+  search_outline: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={search_outline} {...props} />
   ),
   spinner: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={spinner} {...props} />

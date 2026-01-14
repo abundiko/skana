@@ -2,6 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
 
+import add_banner from "../../assets/images/colored-icons/add_banner.svg";
 import no_transactions from "../../assets/images/colored-icons/no_transactions.svg";
 import success_check from "../../assets/images/colored-icons/success_check.svg";
 
@@ -44,6 +45,9 @@ export const AppSvg = forwardRef<any, AppSvgProps>(
 AppSvg.displayName = "AppSvg";
 
 export const AppColoredIcons = {
+  add_banner: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={add_banner} {...props} />
+  ),
   no_transactions: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={no_transactions} {...props} />
   ),

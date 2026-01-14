@@ -84,6 +84,12 @@ function HomeBottomNav() {
   );
 }
 
+export function HomeBottomNavSpace() {
+  const { bottom } = useSafeAreaInsets();
+  
+  return <View style={{ height: HOME_NAV_HEIGHT + bottom }} />;
+}
+
 export default memo(HomeBottomNav);
 
 const items: {

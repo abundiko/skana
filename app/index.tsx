@@ -1,4 +1,5 @@
 import { paths } from "@/constants/paths";
+import { useLSAccount } from "@/hooks/localStorage/account";
 import { useLSSettings } from "@/hooks/localStorage/settings";
 import { Redirect } from "expo-router";
 
@@ -6,7 +7,7 @@ export default function Index() {
   const {
     item: { onboarded },
   } = useLSSettings();
-  const { item: account } = useLSSettings();
+  const { item: account } = useLSAccount();
 
   if (!onboarded) return <Redirect href={paths.onboard1} />;
 

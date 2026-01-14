@@ -13,8 +13,8 @@ export type UserModel = {
 export const dummyUsers: UserModel[] = [
   {
     _id: "65a51a8b8b3a8b5a8b5a8b5a",
-    username: "dave_grohl",
-    fullname: "Dave Grohl",
+    username: "abundiko",
+    fullname: "Abundance",
     email: "dave.grohl@example.com",
     phone: "+1-202-555-0191",
     imageUrl: "https://randomuser.me/api/portraits/men/43.jpg",
@@ -24,11 +24,11 @@ export const dummyUsers: UserModel[] = [
   },
   {
     _id: "65a51a8b8b3a8b5a8b5a8b5b",
-    username: "taylor_hawkins",
-    fullname: "Taylor Hawkins",
+    username: "comfy_0",
+    fullname: "Comfort Ologbo",
     email: "taylor.hawkins@example.com",
     phone: "+1-310-555-0182",
-    imageUrl: "https://randomuser.me/api/portraits/men/44.jpg",
+    imageUrl: "https://randomuser.me/api/portraits/women/14.jpg",
     verified: false,
     createdAt: "2023-10-15T11:00:00.000Z",
     updatedAt: "2023-11-21T12:00:00.000Z",

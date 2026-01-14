@@ -8,6 +8,7 @@ export const useLSSettings = () =>
     defaultValue: {
       onboarded: false,
       themeMode: "light",
+      showWalletBalance: false,
     },
   });
 
@@ -16,5 +17,6 @@ export const LSSettings = RNLocalStorage<Settings>(tags.storage.settings, {
   defaultValue: {
     onboarded: false,
     themeMode: "light",
+    showWalletBalance: false,
   },
 });

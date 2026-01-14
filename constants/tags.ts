@@ -1,11 +1,11 @@
 export const tags = {
   storage: {
-    settings: "_settings_",
+    settings: "__settings_",
     preferences: "_preferences",
-    account: "_account_",
+    account: "__account__",
   },
   query: {
-   
+    transactions: "transactions",
   },
   sheets: {
     theme: "theme-sheet",
