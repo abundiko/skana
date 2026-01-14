@@ -3,15 +3,22 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
 
 import at from "../../assets/images/flat-icons/at.svg";
+import avatar_fill from "../../assets/images/flat-icons/avatar_fill.svg";
 import avatar_outline from "../../assets/images/flat-icons/avatar_outline.svg";
 import business_outline from "../../assets/images/flat-icons/business_outline.svg";
+import card_fill from "../../assets/images/flat-icons/card_fill.svg";
 import card_outline from "../../assets/images/flat-icons/card_outline.svg";
 import chevron_down from "../../assets/images/flat-icons/chevron_down.svg";
 import document_outline from "../../assets/images/flat-icons/document_outline.svg";
+import fingerprint from "../../assets/images/flat-icons/fingerprint.svg";
+import home_fill from "../../assets/images/flat-icons/home_fill.svg";
+import home_outline from "../../assets/images/flat-icons/home_outline.svg";
 import lock_outline from "../../assets/images/flat-icons/lock_outline.svg";
 import phone_fill from "../../assets/images/flat-icons/phone_fill.svg";
 import questionmark_circle from "../../assets/images/flat-icons/questionmark_circle.svg";
 import spinner from "../../assets/images/flat-icons/spinner.svg";
+import transaction_history_fill from "../../assets/images/flat-icons/transaction_history_fill.svg";
+import transaction_history_outline from "../../assets/images/flat-icons/transaction_history_outline.svg";
 
 import React, { forwardRef } from "react";
 import { SvgProps } from "react-native-svg";
@@ -53,11 +60,17 @@ AppSvg.displayName = "AppSvg";
 
 export const AppIcons = {
   at: (props: Omit<AppSvgProps, "icon">) => <AppSvg icon={at} {...props} />,
+  avatar_fill: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={avatar_fill} {...props} />
+  ),
   avatar_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={avatar_outline} {...props} />
   ),
   business_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={business_outline} {...props} />
+  ),
+  card_fill: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={card_fill} {...props} />
   ),
   card_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={card_outline} {...props} />
@@ -67,6 +80,15 @@ export const AppIcons = {
   ),
   document_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={document_outline} {...props} />
+  ),
+  fingerprint: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={fingerprint} {...props} />
+  ),
+  home_fill: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={home_fill} {...props} />
+  ),
+  home_outline: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={home_outline} {...props} />
   ),
   lock_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={lock_outline} {...props} />
@@ -79,5 +101,11 @@ export const AppIcons = {
   ),
   spinner: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={spinner} {...props} />
+  ),
+  transaction_history_fill: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={transaction_history_fill} {...props} />
+  ),
+  transaction_history_outline: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={transaction_history_outline} {...props} />
   ),
 };

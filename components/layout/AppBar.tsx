@@ -26,6 +26,7 @@ export interface AppBarProps {
   onBackPress?: () => void;
   /** If true, renders a bottom border. */
   borderBottom?: boolean;
+  centerTitle?: boolean;
 }
 
 /**
@@ -40,6 +41,7 @@ export default function AppBar({
   onBackPress,
   subtitle,
   borderBottom = false,
+  centerTitle = false,
 }: AppBarProps) {
   const canGoBack = router.canGoBack();
 
@@ -59,7 +61,11 @@ export default function AppBar({
 
         <View className="flex-1 flex-row items-center justify-between pl-2">
           {typeof title === "string" ? (
-            <View className="flex-1 justify-center">
+            <View
+              className={cn("flex-1 justify-center", {
+                "items-center": centerTitle,
+              })}
+            >
               <TText
                 variant="base"
                 className="font-semibold text-lg tracking-wider"
@@ -81,9 +87,18 @@ export default function AppBar({
             <View className="flex-1">{title}</View>
           )}
 
-          <View className="flex-row items-center justify-end pl-2 gap-2">
-            {children}
-          </View>
+          {children ? (
+            <View className="flex-row items-center justify-end pl-2 gap-2">
+              {children}
+            </View>
+          ) : (
+            !hideBack &&
+            canGoBack && (
+              <View pointerEvents="none" style={{ opacity: 0 }}>
+                <BackIcon onPress={onBackPress} />
+              </View>
+            )
+          )}
         </View>
       </View>
     </>

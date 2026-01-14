@@ -6,9 +6,11 @@ export default function Index() {
   const {
     item: { onboarded },
   } = useLSSettings();
+  const { item: account } = useLSSettings();
 
   if (!onboarded) return <Redirect href={paths.onboard1} />;
 
-  if(true) return <Redirect href={paths.register} />
-  
+  if (!account) return <Redirect href={paths.login} />;
+
+  return <Redirect href={paths.home} />;
 }

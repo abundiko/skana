@@ -12,6 +12,7 @@ import Animated, { FadeInDown, ZoomIn } from "react-native-reanimated";
 
 export default function RegisterSuccess() {
   function handleHome() {
+    router.dismissAll();
     router.dismissTo(paths.home);
   }
 
