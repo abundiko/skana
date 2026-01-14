@@ -1,3 +1,5 @@
+import { buildUrlQuery } from "@/functions/helpers";
+
 export const paths = {
   index: "/",
 
@@ -23,9 +25,12 @@ export const paths = {
   forgotPassword: "/auth/forgot-password",
   forgotPasswordVerify: "/auth/forgot-password/verify",
   forgotPasswordCreatePassword: "/auth/forgot-password/create-password",
-  
+
   home: "/home",
   homeTransactions: "/home/transactions",
   homeWallet: "/home/wallet",
   homeProfile: "/home/profile",
+
+  transactionSingle: (id: string) =>
+    `/home/single-transaction${buildUrlQuery({ id })}` as "/home/single-transaction",
 } as const;

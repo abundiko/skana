@@ -24,3 +24,22 @@ export async function $getTransactions(): Promise<TransactionModelPopulated[]> {
 
   return transactions.filter((i) => i !== null);
 }
+
+export async function $getTransactionById(
+  id: string
+): Promise<TransactionModelPopulated | null> {
+  await sleep(3);
+  const found = dummyTransactions.find((t) => t._id === id);
+  if (!found) return null;
+
+  const foundFrom = dummyUsers.find((u) => u._id === found.from);
+  const foundTo = dummyUsers.find((u) => u._id === found.to);
+
+  if (!foundFrom || !foundTo) return null;
+
+  return {
+    ...found,
+    to: foundTo,
+    from: foundFrom,
+  };
+}

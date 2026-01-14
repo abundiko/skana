@@ -1,4 +1,5 @@
 import { cls } from "@/constants";
+import { paths } from "@/constants/paths";
 import { formatPrice } from "@/functions/number";
 import { TransactionFunctions } from "@/functions/transaction";
 import { cn } from "@/lib/cn";
@@ -8,10 +9,12 @@ import {
 } from "@/types/transaction";
 import { Ionicons } from "@expo/vector-icons";
 import { format } from "date-fns";
+import { router } from "expo-router";
 import { View } from "react-native";
 import { useResolveClassNames } from "uniwind";
 import Skeleton from "../animation/Skeleton";
 import { TText, TView } from "../themed";
+import AppButton from "../ui/AppButton";
 
 type TransactionCardProps = {
   transaction: TransactionModelPopulated;
@@ -23,7 +26,9 @@ export default function TransactionCard({
   borderTop,
 }: TransactionCardProps) {
   return (
-    <>
+    <AppButton
+      onPress={() => router.navigate(paths.transactionSingle(transaction._id))}
+    >
       <View
         className={cn(
           "flex-row gap-3 items-center py-4 border-t border-transparent",
@@ -50,7 +55,7 @@ export default function TransactionCard({
           <Pill status={transaction.status} />
         </View>
       </View>
-    </>
+    </AppButton>
   );
 }
 
@@ -133,3 +138,9 @@ export function TransactionCardSkeleton() {
     </View>
   );
 }
+
+export const TransactionCardComponents = {
+  Amount,
+  Pill,
+  Icon,
+};

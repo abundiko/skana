@@ -1,3 +1,4 @@
+import { HomeBottomNavSpace } from "@/components/home/HomeBottomNav";
 import { AppIcons } from "@/components/icons/AppIcons";
 import AppScaffold from "@/components/layout/AppScaffold";
 import NoTransactionsView from "@/components/transactions/NoTransactionsView";
@@ -57,6 +58,7 @@ export default function Index() {
               data={groupedTransactions}
               renderItem={({ item }) => <TransactionGroup group={item} />}
               keyExtractor={(item) => item.date}
+              ListFooterComponent={() => <HomeBottomNavSpace />}
             />
           )}
         </View>

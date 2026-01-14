@@ -10,7 +10,9 @@ import business_outline from "../../assets/images/flat-icons/business_outline.sv
 import card_fill from "../../assets/images/flat-icons/card_fill.svg";
 import card_outline from "../../assets/images/flat-icons/card_outline.svg";
 import chevron_down from "../../assets/images/flat-icons/chevron_down.svg";
+import copy_outline from "../../assets/images/flat-icons/copy_outline.svg";
 import document_outline from "../../assets/images/flat-icons/document_outline.svg";
+import exclamation from "../../assets/images/flat-icons/exclamation.svg";
 import filter_lines from "../../assets/images/flat-icons/filter_lines.svg";
 import fingerprint from "../../assets/images/flat-icons/fingerprint.svg";
 import home_fill from "../../assets/images/flat-icons/home_fill.svg";
@@ -21,6 +23,7 @@ import phone_fill from "../../assets/images/flat-icons/phone_fill.svg";
 import questionmark_circle from "../../assets/images/flat-icons/questionmark_circle.svg";
 import scan_outline from "../../assets/images/flat-icons/scan_outline.svg";
 import search_outline from "../../assets/images/flat-icons/search_outline.svg";
+import share from "../../assets/images/flat-icons/share.svg";
 import spinner from "../../assets/images/flat-icons/spinner.svg";
 import transaction_history_fill from "../../assets/images/flat-icons/transaction_history_fill.svg";
 import transaction_history_outline from "../../assets/images/flat-icons/transaction_history_outline.svg";
@@ -86,8 +89,14 @@ export const AppIcons = {
   chevron_down: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={chevron_down} {...props} />
   ),
+  copy_outline: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={copy_outline} {...props} />
+  ),
   document_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={document_outline} {...props} />
+  ),
+  exclamation: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={exclamation} {...props} />
   ),
   filter_lines: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={filter_lines} {...props} />
@@ -118,6 +127,9 @@ export const AppIcons = {
   ),
   search_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={search_outline} {...props} />
+  ),
+  share: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={share} {...props} />
   ),
   spinner: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={spinner} {...props} />
