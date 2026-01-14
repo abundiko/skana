@@ -27,6 +27,7 @@ import share from "../../assets/images/flat-icons/share.svg";
 import spinner from "../../assets/images/flat-icons/spinner.svg";
 import transaction_history_fill from "../../assets/images/flat-icons/transaction_history_fill.svg";
 import transaction_history_outline from "../../assets/images/flat-icons/transaction_history_outline.svg";
+import verified_badge from "../../assets/images/flat-icons/verified_badge.svg";
 
 import React, { forwardRef } from "react";
 import { SvgProps } from "react-native-svg";
@@ -139,5 +140,8 @@ export const AppIcons = {
   ),
   transaction_history_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={transaction_history_outline} {...props} />
+  ),
+  verified_badge: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={verified_badge} {...props} />
   ),
 };
