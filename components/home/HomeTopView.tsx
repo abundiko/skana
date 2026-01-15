@@ -1,4 +1,6 @@
+import { paths } from "@/constants/paths";
 import { formatPrice } from "@/functions/number";
+import { router } from "expo-router";
 import { View } from "react-native";
 import { AppIcons } from "../icons/AppIcons";
 import { TText } from "../themed";
@@ -56,7 +58,7 @@ const actions: {
   {
     title: "Search to Pay",
     icon: "search_outline",
-    onPress: () => {},
+    onPress: () => router.navigate(paths.paySearch),
   },
   {
     title: "Receive",

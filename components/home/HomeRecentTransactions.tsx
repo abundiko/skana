@@ -19,15 +19,15 @@ export default function HomeRecentTransactions() {
     <View className="p-5 gap-3">
       <View className="flex-row items-center justify-between">
         <TText
-          onPress={() => setNo(!no)}
           variant="primary"
           className="font-semibold text-base"
-        >
+          >
           Recent Transactions
         </TText>
         <AppButton
           hitSlop={10}
-          onLongPress={() => router.navigate(paths.homeTransactions)}
+          onLongPress={() => setNo(!no)}
+          onPress={() => router.navigate(paths.homeTransactions)}
         >
           <TText variant="primary" className="font-medium text-sm">
             View All

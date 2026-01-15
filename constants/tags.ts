@@ -1,15 +1,14 @@
 export const tags = {
   storage: {
-    settings: "__settings_",
+    settings: "___settings_",
     preferences: "_preferences",
-    account: "__account__",
+    account: "___account__",
   },
   query: {
     transactions: "transactions",
+    accounts: "accounts",
   },
   sheets: {
-    theme: "theme-sheet",
-    update: "update-sheet",
-    movieDownload: (id: string) => `movie-download-sheet-${id}`,
+    confirmPin: "confirm_pin_sheet"
   },
 } as const;

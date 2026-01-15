@@ -33,4 +33,10 @@ export const paths = {
 
   transactionSingle: (id: string) =>
     `/home/single-transaction${buildUrlQuery({ id })}` as "/home/single-transaction",
+
+  paySearch: "/home/pay/search",
+  paySendAmount: (id: string) =>
+    `/home/pay/send/amount${buildUrlQuery({ userId: id })}` as "/home/pay/send/amount",
+  paySendConfirm: "/home/pay/send/confirm",
+  paySendSuccess: "/home/pay/send/success",
 } as const;

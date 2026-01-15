@@ -1,6 +1,11 @@
+import { HomeBottomNavSpace } from "@/components/home/HomeBottomNav";
 import HomeScaffold from "@/components/home/HomeScaffold";
 import { AppIcons } from "@/components/icons/AppIcons";
+import ProfileListTile, {
+  ProfileListTileProps,
+} from "@/components/profile/ProfileListTile";
 import { TText } from "@/components/themed";
+import { TransactionCardComponents } from "@/components/transactions/TransactionCard";
 import ListGroup from "@/components/ui/ListGroup";
 import UserAvatar from "@/components/ui/UserAvatar";
 import { useLSAccount } from "@/hooks/localStorage/account";
@@ -33,10 +38,69 @@ export default function Index() {
       }
     >
       <View className="p-5 gap-5">
-        <ListGroup title="Account">
-          <></>
-        </ListGroup>
+        {profileActions.map((action, i) => (
+          <ListGroup title={action.title} key={i}>
+            {action.actions.map((item, i) => (
+              <ProfileListTile key={i} {...item} />
+            ))}
+          </ListGroup>
+        ))}
+        <HomeBottomNavSpace />
       </View>
     </HomeScaffold>
   );
 }
+
+const profileActions: { title: string; actions: ProfileListTileProps[] }[] = [
+  {
+    title: "Account",
+    actions: [
+      {
+        title: "Personal Information",
+        icon: "avatar_outline",
+        onPress: () => {},
+      },
+      {
+        title: "Verified Status",
+        icon: "check_circle",
+        onPress: () => {},
+        suffix: <TransactionCardComponents.Pill status="success" />,
+      },
+    ],
+  },
+  {
+    title: "Security",
+    actions: [
+      {
+        title: "Security Settings",
+        icon: "shield_key",
+        onPress: () => {},
+      },
+    ],
+  },
+  {
+    title: "Support",
+    actions: [
+      {
+        title: "Help Centre",
+        icon: "questionmark_circle",
+        onPress: () => {},
+      },
+      {
+        title: "Term & Privacy",
+        icon: "document_outline",
+        onPress: () => {},
+      },
+    ],
+  },
+  {
+    title: "Preferences",
+    actions: [
+      {
+        title: "Notifications",
+        icon: "bell_outline",
+        onPress: () => {},
+      },
+    ],
+  },
+];

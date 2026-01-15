@@ -13,7 +13,7 @@ export default function ListGroup({ children, title }: ListGroupProps) {
       <TText variant="shade300" className="text-base font-medium">
         {title}
       </TText>
-      <TView variant="pure" className="rounded-lg py-2 px-4">
+      <TView variant="pure" className="rounded-lg py-2 px-1">
         {children}
       </TView>
     </View>

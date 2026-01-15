@@ -29,12 +29,12 @@ function Toggle({ children, color }: { children?: ReactNode; color?: string }) {
   );
 }
 
-function Display({ value }: { value?: string }) {
+function Display({ value, show }: { value?: string; show?: boolean }) {
   const {
     item: { showWalletBalance },
   } = useLSSettings();
 
-  return showWalletBalance ? value : formatPrice("****", true, true);
+  return showWalletBalance || show ? value : formatPrice("****", true, true);
 }
 
 export const WalletBalance = {

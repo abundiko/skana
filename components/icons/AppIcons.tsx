@@ -5,10 +5,12 @@
 import at from "../../assets/images/flat-icons/at.svg";
 import avatar_fill from "../../assets/images/flat-icons/avatar_fill.svg";
 import avatar_outline from "../../assets/images/flat-icons/avatar_outline.svg";
+import bank_fill from "../../assets/images/flat-icons/bank_fill.svg";
 import bell_outline from "../../assets/images/flat-icons/bell_outline.svg";
 import business_outline from "../../assets/images/flat-icons/business_outline.svg";
 import card_fill from "../../assets/images/flat-icons/card_fill.svg";
 import card_outline from "../../assets/images/flat-icons/card_outline.svg";
+import check_circle from "../../assets/images/flat-icons/check_circle.svg";
 import chevron_down from "../../assets/images/flat-icons/chevron_down.svg";
 import copy_outline from "../../assets/images/flat-icons/copy_outline.svg";
 import document_outline from "../../assets/images/flat-icons/document_outline.svg";
@@ -20,14 +22,17 @@ import home_outline from "../../assets/images/flat-icons/home_outline.svg";
 import inbox_outline from "../../assets/images/flat-icons/inbox_outline.svg";
 import lock_outline from "../../assets/images/flat-icons/lock_outline.svg";
 import phone_fill from "../../assets/images/flat-icons/phone_fill.svg";
+import plus from "../../assets/images/flat-icons/plus.svg";
 import questionmark_circle from "../../assets/images/flat-icons/questionmark_circle.svg";
 import scan_outline from "../../assets/images/flat-icons/scan_outline.svg";
 import search_outline from "../../assets/images/flat-icons/search_outline.svg";
 import share from "../../assets/images/flat-icons/share.svg";
+import shield_key from "../../assets/images/flat-icons/shield_key.svg";
 import spinner from "../../assets/images/flat-icons/spinner.svg";
 import transaction_history_fill from "../../assets/images/flat-icons/transaction_history_fill.svg";
 import transaction_history_outline from "../../assets/images/flat-icons/transaction_history_outline.svg";
 import verified_badge from "../../assets/images/flat-icons/verified_badge.svg";
+import withdraw from "../../assets/images/flat-icons/withdraw.svg";
 
 import React, { forwardRef } from "react";
 import { SvgProps } from "react-native-svg";
@@ -75,6 +80,9 @@ export const AppIcons = {
   avatar_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={avatar_outline} {...props} />
   ),
+  bank_fill: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={bank_fill} {...props} />
+  ),
   bell_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={bell_outline} {...props} />
   ),
@@ -86,6 +94,9 @@ export const AppIcons = {
   ),
   card_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={card_outline} {...props} />
+  ),
+  check_circle: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={check_circle} {...props} />
   ),
   chevron_down: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={chevron_down} {...props} />
@@ -120,6 +131,7 @@ export const AppIcons = {
   phone_fill: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={phone_fill} {...props} />
   ),
+  plus: (props: Omit<AppSvgProps, "icon">) => <AppSvg icon={plus} {...props} />,
   questionmark_circle: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={questionmark_circle} {...props} />
   ),
@@ -132,6 +144,9 @@ export const AppIcons = {
   share: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={share} {...props} />
   ),
+  shield_key: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={shield_key} {...props} />
+  ),
   spinner: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={spinner} {...props} />
   ),
@@ -143,5 +158,8 @@ export const AppIcons = {
   ),
   verified_badge: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={verified_badge} {...props} />
+  ),
+  withdraw: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={withdraw} {...props} />
   ),
 };

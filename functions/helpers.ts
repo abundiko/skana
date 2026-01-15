@@ -42,6 +42,10 @@ export function removeNullishValues(obj: any) {
   );
 }
 
-export function sleep(s:number){
-  return new Promise(resolve=>setTimeout(resolve,s*1000))
+export function sleep(s: number) {
+  return new Promise((resolve) => setTimeout(resolve, s * 1000));
+}
+
+export function randomNumber(from: number, to: number) {
+  return Math.floor(Math.random() * (to - from + 1)) + from;
 }

@@ -21,7 +21,7 @@ export default function SecurePassKeyBoard({
   value,
   disabled = false,
 }: SecurePassKeyBoardProps) {
-  const { textLight } = useAppTheme();
+  const { primary } = useAppTheme();
   const [keys] = useState(
     () =>
       [
@@ -66,12 +66,12 @@ export default function SecurePassKeyBoard({
                   <Ionicons
                     name="backspace-outline"
                     size={24}
-                    color={textLight}
+                    color={primary}
                   />
                 ) : (
                   <TText
-                    variant="shade100"
-                    className="text-secondary-950 font-medium text-lg"
+                    variant="primary"
+                    className="font-medium text-lg"
                   >
                     {key}
                   </TText>
