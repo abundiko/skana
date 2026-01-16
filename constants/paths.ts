@@ -35,8 +35,13 @@ export const paths = {
     `/home/single-transaction${buildUrlQuery({ id })}` as "/home/single-transaction",
 
   paySearch: "/home/pay/search",
-  paySendAmount: (id: string) =>
-    `/home/pay/send/amount${buildUrlQuery({ userId: id })}` as "/home/pay/send/amount",
+  payScan: "/home/pay/scan",
+  paySendAmount: (id: string, amount?: number) =>
+    `/home/pay/send/amount${buildUrlQuery({ userId: id, amount })}` as "/home/pay/send/amount",
   paySendConfirm: "/home/pay/send/confirm",
   paySendSuccess: "/home/pay/send/success",
+
+  payReceive: "/home/pay/receive",
+  payReceiveQr: "/home/pay/receive/qr",
+  payReceiveAmount: "/home/pay/receive/amount",
 } as const;

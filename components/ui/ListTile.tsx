@@ -10,7 +10,7 @@ import { TText } from "../themed";
 
 export type ListTileProps = TouchableOpacityProps & {
   title: ReactNode;
-  subTitle?: string;
+  subTitle?: ReactNode;
   icon?: string;
   suffixIcon?: string | false;
   href?: string;
@@ -69,9 +69,15 @@ function ListTile({
             item.title
           )}
           {item.subTitle && (
-            <TText variant="shade300" className="flex-1 text-xs">
-              {item.subTitle}
-            </TText>
+            <>
+              {typeof item.subTitle === "string" ? (
+                <TText variant="shade300" className="flex-1 text-xs">
+                  {item.subTitle}
+                </TText>
+              ) : (
+                item.subTitle
+              )}
+            </>
           )}
         </View>
         {suffix ? (

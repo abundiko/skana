@@ -1,14 +1,16 @@
 export const tags = {
   storage: {
-    settings: "___settings_",
+    settings: "__settings____",
     preferences: "_preferences",
-    account: "___account__",
+    account: "___account___",
   },
   query: {
     transactions: "transactions",
     accounts: "accounts",
   },
   sheets: {
-    confirmPin: "confirm_pin_sheet"
+    theme: "theme_sheet",
+    confirmPin: "confirm_pin_sheet",
+    shareReceiveQr: "share_receive_qr_sheet",
   },
 } as const;

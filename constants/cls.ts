@@ -32,7 +32,7 @@ export const cls = {
     opacifiedAlt90: "bg-white/90 dark:bg-black/90 ",
     danger: "bg-red-400 dark:bg-red-800",
     primary: "bg-primary dark:bg-primary",
-    primaryLight: "bg-primary-light dark:bg-primary-light",
+    primaryLight: "bg-primary-100 dark:bg-primary-light",
     accentGreen: "bg-[#07B53B]",
     accentRed: "bg-[#E50F0F]",
   },
@@ -63,7 +63,7 @@ export const cls = {
     dangerText: `${buttonTextClass} text-white dark:text-red-800`,
     bg: `${buttonClass} bg-primary-dark dark:bg-white py-2.5 rounded-4xl`,
     bgText: `${buttonTextClass} dark:text-black text-white`,
-    gray: `${buttonClass} bg-neutral-200 dark:bg-neutral-800 py-3.5 rounded-4xl`,
+    gray: `${buttonClass} bg-[#F3F4F6] dark:bg-neutral-800 py-3.5 rounded-4xl`,
     grayText: `${buttonTextClass} text-black dark:text-white`,
   },
   input: {

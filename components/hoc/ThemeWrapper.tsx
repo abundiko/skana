@@ -14,7 +14,7 @@ export default function ThemeWrapper({
   useEffect(() => {
     if (!theme) return;
     console.log({ theme });
-    Uniwind.setTheme("light");
+    Uniwind.setTheme(theme);
    
   }, [theme]);
 

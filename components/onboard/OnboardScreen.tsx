@@ -1,7 +1,9 @@
 import { cls } from "@/constants";
+import { paths } from "@/constants/paths";
 import { useLSSettings } from "@/hooks/localStorage/settings";
 import { useExactPathKey } from "@/hooks/useExactPathKey";
 import { cn } from "@/lib/cn";
+import { router } from "expo-router";
 import { ImageBackground, View } from "react-native";
 import Animated, { FadeInDown, FadeOut } from "react-native-reanimated";
 import { BackButton } from "../layout/AppBar";
@@ -31,6 +33,7 @@ export default function OnboardScreen(props: OnboardScreenProps) {
       updateItem({
         onboarded: true,
       });
+      requestAnimationFrame(() => router.dismissTo(paths.index));
     }
   }
 

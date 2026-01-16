@@ -27,6 +27,7 @@ export interface AppBarProps {
   /** If true, renders a bottom border. */
   borderBottom?: boolean;
   centerTitle?: boolean;
+  accentColor?: string;
 }
 
 /**
@@ -42,6 +43,7 @@ export default function AppBar({
   subtitle,
   borderBottom = false,
   centerTitle = false,
+  accentColor,
 }: AppBarProps) {
   const canGoBack = router.canGoBack();
 
@@ -57,7 +59,9 @@ export default function AppBar({
           [`border-b ${cls.border.class}`]: borderBottom,
         })}
       >
-        {!hideBack && canGoBack && <BackIcon onPress={onBackPress} />}
+        {!hideBack && canGoBack && (
+          <BackIcon onPress={onBackPress} color={accentColor} />
+        )}
 
         <View className="flex-1 flex-row items-center justify-between pl-2">
           {typeof title === "string" ? (
@@ -68,6 +72,7 @@ export default function AppBar({
             >
               <TText
                 variant="base"
+                style={accentColor ? { color: accentColor } : {}}
                 className="font-semibold text-lg tracking-wider"
                 numberOfLines={1}
               >

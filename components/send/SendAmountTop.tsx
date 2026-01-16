@@ -1,18 +1,14 @@
 import { formatPrice } from "@/functions/number";
-import { cn } from "@/lib/cn";
 import { View } from "react-native";
-import { useResolveClassNames } from "uniwind";
 import Skeleton from "../animation/Skeleton";
-import { AppIcons } from "../icons/AppIcons";
+import AccountVerifiedCard from "../common/AccountVerifiedCard";
 import { AppMessage } from "../layout/AppMessage";
 import { TText } from "../themed";
 import { AppInput } from "../ui/AppInput";
-import UserAvatar from "../ui/UserAvatar";
 import { WalletBalance } from "../wallet/WalletBalance";
 import { useSendContext } from "./SendContext";
 
 export default function SendAmountTop() {
-  const style = useResolveClassNames(cn("border-green-500"));
   const {
     accountQuery: { data },
     amount,
@@ -20,36 +16,7 @@ export default function SendAmountTop() {
 
   return (
     <View className=" justify-center items-center gap-4">
-      {!data ? (
-        <LoadingView />
-      ) : (
-        <>
-          <View className="relative">
-            <UserAvatar
-              size={60}
-              src={data?.imageUrl}
-              name={data?.fullname}
-              style={{ borderWidth: 4, borderColor: style.borderColor }}
-            />
-            <View className="absolute right-0 bg-white rounded-full">
-              <View style={{ transform: [{ scale: 1.2 }] }}>
-                <AppIcons.verified_badge className="h-4 w-4 text-green-500 " />
-              </View>
-            </View>
-          </View>
-          <View>
-            <TText variant="base" className="font-medium text-xl text-center">
-              {data?.fullname}
-            </TText>
-            <TText
-              variant="shade200"
-              className="font-semibold text-sm text-center"
-            >
-              @{data?.username}
-            </TText>
-          </View>
-        </>
-      )}
+      {!data ? <LoadingView /> : <AccountVerifiedCard user={data} />}
 
       <View>
         <TText variant="base" className="font-bold text-2xl text-center">

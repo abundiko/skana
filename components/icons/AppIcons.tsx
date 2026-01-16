@@ -2,6 +2,7 @@
 
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
 
+import arrow_right from "../../assets/images/flat-icons/arrow_right.svg";
 import at from "../../assets/images/flat-icons/at.svg";
 import avatar_fill from "../../assets/images/flat-icons/avatar_fill.svg";
 import avatar_outline from "../../assets/images/flat-icons/avatar_outline.svg";
@@ -11,24 +12,31 @@ import business_outline from "../../assets/images/flat-icons/business_outline.sv
 import card_fill from "../../assets/images/flat-icons/card_fill.svg";
 import card_outline from "../../assets/images/flat-icons/card_outline.svg";
 import check_circle from "../../assets/images/flat-icons/check_circle.svg";
+import check_fill from "../../assets/images/flat-icons/check_fill.svg";
 import chevron_down from "../../assets/images/flat-icons/chevron_down.svg";
 import copy_outline from "../../assets/images/flat-icons/copy_outline.svg";
 import document_outline from "../../assets/images/flat-icons/document_outline.svg";
 import exclamation from "../../assets/images/flat-icons/exclamation.svg";
 import filter_lines from "../../assets/images/flat-icons/filter_lines.svg";
 import fingerprint from "../../assets/images/flat-icons/fingerprint.svg";
+import flash_light_off_outline from "../../assets/images/flat-icons/flash_light_off_outline.svg";
+import flash_light_outline from "../../assets/images/flat-icons/flash_light_outline.svg";
+import focus_corners from "../../assets/images/flat-icons/focus_corners.svg";
 import home_fill from "../../assets/images/flat-icons/home_fill.svg";
 import home_outline from "../../assets/images/flat-icons/home_outline.svg";
 import inbox_outline from "../../assets/images/flat-icons/inbox_outline.svg";
 import lock_outline from "../../assets/images/flat-icons/lock_outline.svg";
+import naira_sign from "../../assets/images/flat-icons/naira_sign.svg";
 import phone_fill from "../../assets/images/flat-icons/phone_fill.svg";
 import plus from "../../assets/images/flat-icons/plus.svg";
+import qr from "../../assets/images/flat-icons/qr.svg";
 import questionmark_circle from "../../assets/images/flat-icons/questionmark_circle.svg";
 import scan_outline from "../../assets/images/flat-icons/scan_outline.svg";
 import search_outline from "../../assets/images/flat-icons/search_outline.svg";
 import share from "../../assets/images/flat-icons/share.svg";
 import shield_key from "../../assets/images/flat-icons/shield_key.svg";
 import spinner from "../../assets/images/flat-icons/spinner.svg";
+import theme from "../../assets/images/flat-icons/theme.svg";
 import transaction_history_fill from "../../assets/images/flat-icons/transaction_history_fill.svg";
 import transaction_history_outline from "../../assets/images/flat-icons/transaction_history_outline.svg";
 import verified_badge from "../../assets/images/flat-icons/verified_badge.svg";
@@ -73,6 +81,9 @@ export const AppSvg = forwardRef<any, AppSvgProps>(
 AppSvg.displayName = "AppSvg";
 
 export const AppIcons = {
+  arrow_right: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={arrow_right} {...props} />
+  ),
   at: (props: Omit<AppSvgProps, "icon">) => <AppSvg icon={at} {...props} />,
   avatar_fill: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={avatar_fill} {...props} />
@@ -98,6 +109,9 @@ export const AppIcons = {
   check_circle: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={check_circle} {...props} />
   ),
+  check_fill: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={check_fill} {...props} />
+  ),
   chevron_down: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={chevron_down} {...props} />
   ),
@@ -116,6 +130,15 @@ export const AppIcons = {
   fingerprint: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={fingerprint} {...props} />
   ),
+  flash_light_off_outline: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={flash_light_off_outline} {...props} />
+  ),
+  flash_light_outline: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={flash_light_outline} {...props} />
+  ),
+  focus_corners: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={focus_corners} {...props} />
+  ),
   home_fill: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={home_fill} {...props} />
   ),
@@ -128,10 +151,14 @@ export const AppIcons = {
   lock_outline: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={lock_outline} {...props} />
   ),
+  naira_sign: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={naira_sign} {...props} />
+  ),
   phone_fill: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={phone_fill} {...props} />
   ),
   plus: (props: Omit<AppSvgProps, "icon">) => <AppSvg icon={plus} {...props} />,
+  qr: (props: Omit<AppSvgProps, "icon">) => <AppSvg icon={qr} {...props} />,
   questionmark_circle: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={questionmark_circle} {...props} />
   ),
@@ -149,6 +176,9 @@ export const AppIcons = {
   ),
   spinner: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={spinner} {...props} />
+  ),
+  theme: (props: Omit<AppSvgProps, "icon">) => (
+    <AppSvg icon={theme} {...props} />
   ),
   transaction_history_fill: (props: Omit<AppSvgProps, "icon">) => (
     <AppSvg icon={transaction_history_fill} {...props} />

@@ -33,8 +33,8 @@
     }
 
     @variant dark {
-      --color-primary: var(--color-primary-300);
-      --color-primary-light: var(--color-primary-500);
+      --color-primary: var(--color-primary-500);
+      --color-primary-light: var(--color-primary-400);
       --color-primary-dark: var(--color-primary-700);
     }
   }

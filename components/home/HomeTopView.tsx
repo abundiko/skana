@@ -53,7 +53,7 @@ const actions: {
   {
     title: "Scan to Pay",
     icon: "scan_outline",
-    onPress: () => {},
+    onPress: () => router.navigate(paths.payScan),
   },
   {
     title: "Search to Pay",
@@ -63,6 +63,6 @@ const actions: {
   {
     title: "Receive",
     icon: "inbox_outline",
-    onPress: () => {},
+    onPress: () => router.navigate(paths.payReceive),
   },
 ];

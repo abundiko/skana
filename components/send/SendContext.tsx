@@ -28,7 +28,12 @@ export function SendContextProvider({ children }: { children: ReactNode }) {
     if (amt.length > 10) setAmount(amt.slice(0, 10));
   }, [amount]);
 
-  const { userId } = useGlobalSearchParams() as { userId: string };
+  const { userId, amount: amt } = useGlobalSearchParams() as {
+    userId: string;
+    amount?: string;
+  };
+
+  if (amt && amt !== amount && !amount) setAmount(amt);
 
   const accountQuery = useAccountQuerySingle(userId);
 
