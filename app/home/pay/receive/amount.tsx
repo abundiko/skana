@@ -59,6 +59,7 @@ export default function ReceiveAmountScreen() {
             <View className="flex-row gap-2 items-center justify-between">
               {quicks.map((quick, i) => (
                 <AppButton
+                  onPress={() => setAmount(String(quick * 1000))}
                   className={cn(
                     "flex-1 border py-2 rounded",
                     cls.border.class05
